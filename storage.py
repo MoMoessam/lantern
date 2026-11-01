@@ -13,4 +13,4 @@ def load():
 
 def save(data):
     with open('tasks.json', 'w') as f:
-        json.dump(data, f, indent=4)
+        json.dump(data, f, indent=4, sort_keys=True)
