@@ -1,4 +1,4 @@
-# Lantern Task Manager
+# Lantern Usage Guide
 
 ## Add a task
 
