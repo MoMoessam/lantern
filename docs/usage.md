@@ -1,4 +1,4 @@
-# Lantern Task Manager
+# Lantern Usage Guide
 
 ## Add a task
 
@@ -11,3 +11,4 @@ Run:
 Run:
 
     python lantern.py list
+
