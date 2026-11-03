@@ -11,3 +11,5 @@ Run:
 Run:
 
     python lantern.py list
+
+- `lantern remove <task_id>`: Removes a task by its ID.
