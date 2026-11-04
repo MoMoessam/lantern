@@ -1,8 +1,7 @@
 """Lantern: a tiny command-line task tracker."""
 import argparse
-
 import tasks
-
+import export
 
 def main():
     parser = argparse.ArgumentParser(prog="lantern")
@@ -10,6 +9,9 @@ def main():
 
     add_parser = sub.add_parser("add")
     add_parser.add_argument("title")
+
+    export_parser = sub.add_parser("export")
+    export_parser.add_argument("--csv", action="store_true", help="print tasks as CSV")
 
     list_parser = sub.add_parser("list")
 
@@ -21,6 +23,9 @@ def main():
     elif args.command == "list":
         print(f"{len(tasks.list_tasks())} task(s)")
 
+    elif args.command == "export":
+        if args.csv:
+            export.export_csv(tasks.list_tasks())
 
 if __name__ == "__main__":
     main()
