@@ -19,7 +19,14 @@ def main():
         task = tasks.add_task(args.title)
         print(f"Added task: {task['title']}")
     elif args.command == "list":
-        print(f"{len(tasks.list_tasks())} task(s)")
+        if not tasks:
+            print("No tasks found.")
+            
+        else:
+            for task in tasks.list_tasks():
+                print(f"- {task['title']}")
+
+            print(f"{len(tasks.list_tasks())} task(s)")
 
 
 if __name__ == "__main__":
