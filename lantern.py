@@ -1,8 +1,6 @@
 """Lantern: a tiny command-line task tracker."""
 import argparse
-
 import tasks
-
 
 def main():
     parser = argparse.ArgumentParser(prog="lantern")
@@ -19,11 +17,12 @@ def main():
         task = tasks.add_task(args.title)
         print(f"Added task: {task['title']}")
     elif args.command == "list":
+        all_tasks = tasks.list_tasks()
         if args.done:
-            print("Showing Completed Tasks")
-        else:
-            print(f"{len(tasks.list_tasks())} task(s)")
-
+            all_tasks = [t for t in all_tasks if t.get("done", False)]
+        for t in all_tasks:
+            print(t["title"])
+        print(f"{len(all_tasks)} task(s)")
 
 if __name__ == "__main__":
     main()
