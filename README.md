@@ -7,3 +7,8 @@ This repo is the final project of Git course iin the ITI AI and ML track.
 |---|---|
 | Somaia Ahmed | somaiaahmed |
 | Mohamed Essam | MoMoessam |
+
+----
+## Contribution
+
+For contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
