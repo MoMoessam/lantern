@@ -11,4 +11,6 @@ Run:
 Run:
 
     python lantern.py list
+    
+    returns nothing when no tasks
 

@@ -21,6 +21,14 @@ def main():
         task = tasks.add_task(args.title)
         print(f"Added task: {task['title']}")
     elif args.command == "list":
+        if not tasks.list_tasks():
+            print("No tasks found.")
+        else:
+            for task in tasks.list_tasks():
+                print(f"- {task['title']}")
+
+            print(f"{len(tasks.list_tasks())} task(s)")
+
         all_tasks = tasks.list_tasks()
         if args.done:
             all_tasks = [t for t in all_tasks if t.get("done", False)]
