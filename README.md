@@ -1,8 +1,25 @@
-# lantern
-This repo is the final project of Git course iin the ITI AI and ML track.
+# Lantern
+
+A tiny command-line task tracker written in Python 3 (standard library only).
+
+## Install and usage
+
+```bash
+git clone https://github.com/MoMoessam/lantern.git
+cd lantern
+python3 lantern.py add "Write report"
+python3 lantern.py list
+```
+
+## Commands
+
+- `add <title>`: add a task
+- `list`: list tasks (`--done` shows completed ones, `--sort` sorts by title)
+- `export --csv`: print tasks as CSV
+
+See [docs/usage.md](docs/usage.md) for details, and [CONTRIBUTING](contributing.md) for the team's conventions.
 
 ## Team
-
 | Name | GitHub Username |
 |---|---|
 | Somaia Ahmed | somaiaahmed |
@@ -11,4 +28,4 @@ This repo is the final project of Git course iin the ITI AI and ML track.
 ----
 ## Contribution
 
-For contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+For contribution guidelines, see [contributing.md](contributing.md).
