@@ -19,9 +19,8 @@ def main():
         task = tasks.add_task(args.title)
         print(f"Added task: {task['title']}")
     elif args.command == "list":
-        if not tasks:
+        if not tasks.list_tasks():
             print("No tasks found.")
-            
         else:
             for task in tasks.list_tasks():
                 print(f"- {task['title']}")
